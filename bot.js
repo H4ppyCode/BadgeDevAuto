@@ -9,7 +9,7 @@ const bot = new Client({
 console.log("Connexion au bot...");
 
 bot
-  .login(process.env.DISCORD_TOKEN) // Utilisez votre token depuis les variables d'environnement
+  .login(process.env.DISCORD_TOKEN) 
   .then(() => console.log("Connecté au bot !"))
   .catch((error) =>
     console.log("Impossible de se connecter au bot - " + error)
@@ -21,7 +21,7 @@ bot.once("ready", async () => {
   const commands = [
     {
       name: "badge",
-      description: "oue le badge bouffon !",
+      description: "oue le badge  !",
     },
   ];
 
@@ -33,5 +33,5 @@ bot.on("interactionCreate", (interaction) => {
   if (!interaction.isCommand()) return;
 
   if (interaction.commandName === "badge")
-    interaction.reply("oue le badge bouffon!");
+    interaction.reply("oue le badge !");
 });
